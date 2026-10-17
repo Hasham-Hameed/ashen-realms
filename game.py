@@ -15,6 +15,8 @@ print(f"Gold: {gold}")
 
 damage = int(input("How much damage got from enemy: "))
 remaining_health = health - damage
+if remaining_health < 0:
+    remaining_health = 0
 
 print("==== Battle Results ====")
 print(f"Character's name: {name}")
