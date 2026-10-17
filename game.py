@@ -6,9 +6,17 @@ attack = 10
 gold = 50
 
 print("==== RPG Character ====")
-print(f"Name: {character_name}")
+print(f"Name: {name}")
 print(f"Class: {character_class}")
 print(f"Level: {level}")
 print(f"Health: {health}")
-print(f"Attack power: {attack_power}")
+print(f"Attack power: {attack}")
 print(f"Gold: {gold}")
+
+damage = int(input("How much damage got from enemy: "))
+remaining_health = health - damage
+
+print("==== Battle Results ====")
+print(f"Character's name: {name}")
+print(f"Damage received: {damage}")
+print(f"Remaining health: {remaining_health}")
