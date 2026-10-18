@@ -24,6 +24,6 @@ print(f"Damage received: {damage}")
 print(f"Remaining health: {remaining_health}")
 
 if remaining_health == 0:
-    print("Game over! Your character is dead...")
+    print("Game over! Your character is defeated...")
 else:
     print("Your character survived!")
