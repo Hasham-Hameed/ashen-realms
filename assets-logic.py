@@ -1,10 +1,16 @@
 health = 100
 max_health = 100
-if health == max_health:
-    print("Your health is already full!")
+damage = int(input("How much damage an enemy deals: "))
+health = health - damage
+if health < 0:
+    health = 0
+
+if health == 0:
+    print("Your character is defeated...")
+
 else:
-    health_points = int(input("How many health points does the potion restores: "))
-    current_health = health + health_points
-    if current_health > max_health:
-        current_health = max_health
-    print(f"The health before potion is {health} and after is {current_health}")
+    healing = int(input("How a much health points does the healing costs: "))
+    new_health = health + healing
+    if new_health > max_health:
+        new_health = max_health
+    print(f"The health of the character is {new_health}")
