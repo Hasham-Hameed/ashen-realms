@@ -23,3 +23,11 @@ def take_damage(health,damage):
 
 result = take_damage(100,30)
 print(f"Remaining health: {result}")
+
+def heal(health,healing_amount,max_health):
+    updated_health = health + healing_amount
+    if updated_health > max_health:
+        updated_health = max_health
+    return updated_health
+result = heal(60,25,100)
+print(f"Health: {result}")
