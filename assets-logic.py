@@ -15,7 +15,7 @@
 #         new_health = max_health
 #     print(f"The health of the character is {new_health}")
 
-def take_damage(health,damage):
+'''def take_damage(health,damage):
     new_health = health - damage
     if new_health < 0:
         new_health = 0
@@ -30,4 +30,16 @@ def heal(health,healing_amount,max_health):
         updated_health = max_health
     return updated_health
 result = heal(60,25,100)
-print(f"Health: {result}")
+print(f"Health: {result}")'''
+
+def show_character(name,character_class,level,health,gold):
+    print("===== Character Status =====")
+    print(f"Name: {name}")
+    print(f"Class: {character_class}")
+    print(f"Level: {level}")
+    print(f"Health: {health}")
+    print(f"Gold: {gold}")
+    print("============================")
+
+result = show_character("Armin","Warrior",2,85,75)
+print(result)
