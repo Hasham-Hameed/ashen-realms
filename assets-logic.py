@@ -18,7 +18,10 @@ class Character:
         self.health = self.health - damage
         if self.health < 0:
             self.health = 0
-        print(f"Remaining health: {self.health}")
+        if self.health == 0:
+            print(f"{self.name} has been defeated!")
+        else:
+            print(f"Remaining health: {self.health}")
 
     def heal(self,healing_amount):
         self.health = healing_amount + self.health
