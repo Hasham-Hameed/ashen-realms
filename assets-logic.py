@@ -5,7 +5,23 @@
 # gold = 50
 # max_health = 100
 
-
+class Character:
+    def __init__(self,name,character_class,level,health,max_health,attack,gold):
+        self.name = name
+        self.character_class = character_class
+        self.level = level
+        self.health = health
+        self.max_health = max_health
+        self.attack = attack
+        self.gold = gold
+armin = Character("Armin","Warrior",1,100,100,10,50)
+print(f"Name: {armin.name}")
+print(f"Character class: {armin.character_class}")
+print(f"Level: {armin.level}")
+print(f"Health: {armin.health}")
+print(f"Max Health: {armin.max_health}")
+print(f"Attack: {armin.attack}")
+print(f"Gold: {armin.gold}")
 
 damage = int(input("How much damage an enemy deals: "))
 def take_damage(health,damage):
