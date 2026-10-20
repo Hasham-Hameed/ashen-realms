@@ -1,10 +1,3 @@
-# name = "Armin"
-# character_class = "Warrior"
-# level = 1
-# health = 100
-# gold = 50
-# max_health = 100
-
 class Character:
     def __init__(self,name,character_class,level,health,max_health,attack,gold):
         self.name = name
