@@ -1,9 +1,11 @@
-name = "Armin"
-character_class = "Warrior"
-level = 1
-health = 100
-gold = 50
-max_health = 100
+# name = "Armin"
+# character_class = "Warrior"
+# level = 1
+# health = 100
+# gold = 50
+# max_health = 100
+
+
 
 damage = int(input("How much damage an enemy deals: "))
 def take_damage(health,damage):
