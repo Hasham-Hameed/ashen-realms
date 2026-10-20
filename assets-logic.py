@@ -14,46 +14,49 @@ class Character:
         self.max_health = max_health
         self.attack = attack
         self.gold = gold
+
+    def show_status(self):
+        print(f"Name: {self.name}")
+        print(f"Character class: {self.character_class}")
+        print(f"Level: {self.level}")
+        print(f"Health: {self.health}")
+        pass
+
 armin = Character("Armin","Warrior",1,100,100,10,50)
-print(f"Name: {armin.name}")
-print(f"Character class: {armin.character_class}")
-print(f"Level: {armin.level}")
-print(f"Health: {armin.health}")
-print(f"Max Health: {armin.max_health}")
-print(f"Attack: {armin.attack}")
-print(f"Gold: {armin.gold}")
-
-damage = int(input("How much damage an enemy deals: "))
-def take_damage(health,damage):
-    new_health = health - damage
-    if new_health < 0:
-        new_health = 0
-    return new_health
-
-health = take_damage(health,damage)
-print(f"Remaining health: {health}")
+armin.show_status()
 
 
-if health == 0:
-    print("Your character is defeated!")
-else:
-    healing_amount = int(input("How much a potion heals: "))
-    def heal(health,healing_amount,max_health):
-        updated_health = health + healing_amount
-        if updated_health > max_health:
-            updated_health = max_health
-        return updated_health
-    health = heal(health,healing_amount,max_health)
-    print(f"Health: {health}")
+# damage = int(input("How much damage an enemy deals: "))
+# def take_damage(health,damage):
+#     new_health = health - damage
+#     if new_health < 0:
+#         new_health = 0
+#     return new_health
 
-def show_character(name,character_class,level,health,gold):
-    print("===== Character Status =====")
-    print(f"Name: {name}")
-    print(f"Class: {character_class}")
-    print(f"Level: {level}")
-    print(f"Health: {health}")
-    print(f"Gold: {gold}")
-    print(f"Max health: {max_health}")
-    print("============================")
+# health = take_damage(health,damage)
+# print(f"Remaining health: {health}")
 
-show_character(name,character_class,level,health,gold)
+
+# if health == 0:
+#     print("Your character is defeated!")
+# else:
+#     healing_amount = int(input("How much a potion heals: "))
+#     def heal(health,healing_amount,max_health):
+#         updated_health = health + healing_amount
+#         if updated_health > max_health:
+#             updated_health = max_health
+#         return updated_health
+#     health = heal(health,healing_amount,max_health)
+#     print(f"Health: {health}")
+
+# def show_character(name,character_class,level,health,gold):
+#     print("===== Character Status =====")
+#     print(f"Name: {name}")
+#     print(f"Class: {character_class}")
+#     print(f"Level: {level}")
+#     print(f"Health: {health}")
+#     print(f"Gold: {gold}")
+#     print(f"Max health: {max_health}")
+#     print("============================")
+
+# show_character(name,character_class,level,health,gold)
