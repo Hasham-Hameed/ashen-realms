@@ -20,10 +20,16 @@ class Character:
         print(f"Character class: {self.character_class}")
         print(f"Level: {self.level}")
         print(f"Health: {self.health}")
-        pass
 
+    def take_damage(self,damage):
+        self.health = self.health - damage
+        if self.health < 0:
+            self.health = 0
+        print(f"Remaining health: {self.health}")
 armin = Character("Armin","Warrior",1,100,100,10,50)
+armin.take_damage(30)
 armin.show_status()
+
 
 
 # damage = int(input("How much damage an enemy deals: "))
