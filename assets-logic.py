@@ -24,11 +24,14 @@ class Character:
             print(f"Remaining health: {self.health}")
 
     def heal(self,healing_amount):
-        self.health = healing_amount + self.health
-        if self.health > self.max_health:
-            self.health = self.max_health
-        print(f"Updated health: {self.health}")
+        if self.health == 0:
+            print("A defeated character cannot heal!")
+        else:
+            self.health = healing_amount + self.health
+            if self.health > self.max_health:
+                self.health = self.max_health
+            print(f"Updated health: {self.health}")
 armin = Character("Armin","Warrior",1,100,100,10,50)
-armin.take_damage(30)
-armin.heal(20)
+armin.take_damage(100)
+armin.heal(50)
 armin.show_status()
