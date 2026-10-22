@@ -8,6 +8,10 @@ class Character:
         self.attack = attack
         self.gold = gold
 
+class Enemy:
+    def __init__():
+        self
+
     def show_status(self):
         print(f"Name: {self.name}")
         print(f"Character class: {self.character_class}")
