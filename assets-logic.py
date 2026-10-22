@@ -37,10 +37,12 @@ class Character:
         if enemy_health < 0:
             enemy_health = 0
         print(f"Enemy's remaining health: {enemy_health}")
+        return enemy_health
 
 armin = Character("Armin","Warrior",1,100,100,10,50)
 armin.take_damage(100)
 armin.heal(50)
 armin.show_status()
 enemy_health = 80
-armin.attack_enemy(enemy_health)
+enemy_health = armin.attack_enemy(enemy_health)
+print(enemy_health)
