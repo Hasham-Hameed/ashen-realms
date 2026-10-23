@@ -8,11 +8,6 @@ class Character:
         self.attack = attack
         self.gold = gold
 
-class Enemy:
-    def __init__(self,name,health):
-        self.name = name
-        self.health = health
-
     def show_status(self):
         print(f"Name: {self.name}")
         print(f"Character class: {self.character_class}")
@@ -43,6 +38,17 @@ class Enemy:
             enemy_health = 0
         print(f"Enemy's remaining health: {enemy_health}")
         return enemy_health
+
+class Enemy:
+    def __init__(self,name,health):
+        self.name = name
+        self.health = health
+    
+    def take_damage(self,damage):
+        self.health = self.health - damage
+        if self.health < 0:
+            self.health = 0
+        print(f"{self.name}'s remaining health: {self.health}")
 
 armin = Character("Armin","Warrior",1,100,100,10,50)
 armin.take_damage(100)
