@@ -32,12 +32,12 @@ class Character:
                 self.health = self.max_health
             print(f"Updated health: {self.health}")
 
-    def attack_enemy(self, enemy_health):
-        enemy_health = enemy_health - self.attack
-        if enemy_health < 0:
-            enemy_health = 0
-        print(f"Enemy's remaining health: {enemy_health}")
-        return enemy_health
+    def attack_enemy(self, enemy):
+        enemy.health = enemy.health - self.attack
+        if enemy.health < 0:
+            enemy.health = 0
+        print(f"Enemy's remaining health: {enemy.health}")
+        return enemy.health
 
 class Enemy:
     def __init__(self,name,health):
@@ -50,10 +50,8 @@ class Enemy:
             self.health = 0
         print(f"{self.name}'s remaining health: {self.health}")
 
-armin = Character("Armin","Warrior",1,100,100,10,50)
-armin.take_damage(100)
-armin.heal(50)
-armin.show_status()
-enemy_health = 80
-enemy_health = armin.attack_enemy(enemy_health)
-print(enemy_health)
+armin = Character("Armin", "Warrior", 1, 100, 100, 10, 50)
+enemy = Enemy("Goblin", 80)
+
+armin.attack_enemy(enemy)
+armin.attack_enemy(enemy)
