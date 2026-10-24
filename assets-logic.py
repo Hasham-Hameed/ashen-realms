@@ -60,7 +60,7 @@ class Enemy:
             character.health -= 10
             if character.health < 0:
                 character.health = 0
-            print(f"Characterl's remaining health: {character.health}")
+            print(f"{character.name}'s remaining health: {character.health}")
 
 armin = Character("Armin", "Warrior", 1, 100, 100, 10, 50)
 enemy = Enemy("Goblin", 30)
