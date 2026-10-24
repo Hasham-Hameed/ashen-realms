@@ -42,15 +42,6 @@ class Character:
             print(f"Enemy's remaining health: {enemy.health}")
             return enemy.health
 
-    def attack_character(self,character):
-        if character.health == 0:
-            print("The character has already been defeated!")
-        else:
-            character.health -= 10
-            if character.health < 0:
-                character.health = 0
-            print(f"Characterl's remaining health: {character.health}")
-
 class Enemy:
     def __init__(self,name,health):
         self.name = name
@@ -61,6 +52,15 @@ class Enemy:
         if self.health < 0:
             self.health = 0
         print(f"{self.name}'s remaining health: {self.health}")
+
+    def attack_character(self,character):
+        if character.health == 0:
+            print("The character has already been defeated!")
+        else:
+            character.health -= 10
+            if character.health < 0:
+                character.health = 0
+            print(f"Characterl's remaining health: {character.health}")
 
 armin = Character("Armin", "Warrior", 1, 100, 100, 10, 50)
 enemy = Enemy("Goblin", 80)
