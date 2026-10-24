@@ -33,11 +33,14 @@ class Character:
             print(f"Updated health: {self.health}")
 
     def attack_enemy(self, enemy):
-        enemy.health = enemy.health - self.attack
-        if enemy.health < 0:
-            enemy.health = 0
-        print(f"Enemy's remaining health: {enemy.health}")
-        return enemy.health
+        if enemy.health == 0:
+            print("The enemy has already been defeated!")
+        else:
+            enemy.health = enemy.health - self.attack
+            if enemy.health < 0:
+                enemy.health = 0
+            print(f"Enemy's remaining health: {enemy.health}")
+            return enemy.health
 
 class Enemy:
     def __init__(self,name,health):
