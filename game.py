@@ -43,9 +43,10 @@ class Character:
             return enemy.health
 
 class Enemy:
-    def __init__(self,name,health):
+    def __init__(self,name,health,attack):
         self.name = name
         self.health = health
+        self.attack = attack
     
     def take_damage(self,damage):
         self.health = self.health - damage
@@ -57,7 +58,7 @@ class Enemy:
         if character.health == 0:
             print("The character has already been defeated!")
         else:
-            character.health -= 10
+            character.health -= self.attack
             if character.health < 0:
                 character.health = 0
             print(f"{character.name}'s remaining health: {character.health}")
