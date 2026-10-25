@@ -67,3 +67,7 @@ armin = Character("Armin", "Warrior", 1, 100, 100, 10, 50)
 
 goblin = Enemy("Goblin", 30, 5)
 dragon = Enemy("Dragon", 200, 25)
+
+goblin.attack_character(armin)
+dragon.attack_character(armin)
+armin.show_status()
