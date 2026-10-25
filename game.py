@@ -63,8 +63,7 @@ class Enemy:
                 character.health = 0
             print(f"{character.name}'s remaining health: {character.health}")
 
-armin = Character("Armin", "Warrior", 1, 10, 100, 10, 50)
-enemy = Enemy("Goblin", 30)
+armin = Character("Armin", "Warrior", 1, 100, 100, 10, 50)
 
-enemy.attack_character(armin)
-enemy.attack_character(armin)
+goblin = Enemy("Goblin", 30, 5)
+dragon = Enemy("Dragon", 200, 25)
