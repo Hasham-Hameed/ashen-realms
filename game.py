@@ -41,7 +41,10 @@ class Character:
             enemy.health = enemy.health - self.attack
             if enemy.health < 0:
                 enemy.health = 0
-            print(f"Enemy's remaining health: {enemy.health}")
+            if enemy.health == 0:
+                print(f"{enemy.name} has been defeated!")
+            else:
+                print(f"Enemy's remaining health: {enemy.health}")
             return enemy.health
 
 class Enemy:
