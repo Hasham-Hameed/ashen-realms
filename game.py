@@ -33,7 +33,9 @@ class Character:
             print(f"Updated health: {self.health}")
 
     def attack_enemy(self, enemy):
-        if enemy.health == 0:
+        if self.health == 0:
+            print(f"{self.name} has been defeated and cannot attack!")
+        elif enemy.health == 0:
             print("The enemy has already been defeated!")
         else:
             enemy.health = enemy.health - self.attack
