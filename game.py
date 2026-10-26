@@ -54,13 +54,16 @@ class Enemy:
         self.attack = attack
     
     def take_damage(self,damage):
-        self.health = self.health - damage
-        if self.health < 0:
-            self.health = 0
         if self.health == 0:
-            print(f"{self.name} has been defeated!")
+            print(f"{self.name} has already been defeated!")
         else:
-            print(f"{self.name}'s remaining health: {self.health}")
+            self.health = self.health - damage
+            if self.health < 0:
+                self.health = 0
+            if self.health == 0:
+                print(f"{self.name} has been defeated!")
+            else:
+                print(f"{self.name}'s remaining health: {self.health}")
 
     def attack_character(self,character):
         if character.health == 0:
@@ -71,7 +74,7 @@ class Enemy:
                 character.health = 0
             print(f"{character.name}'s remaining health: {character.health}")
 
-armin = Character("Armin", "Warrior", 1, 100, 100, 10, 50)
 goblin = Enemy("Goblin", 10, 5)
 
-armin.attack_enemy(goblin)
+goblin.take_damage(10)
+goblin.take_damage(5)
