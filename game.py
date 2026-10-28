@@ -72,7 +72,10 @@ class Enemy:
             character.health -= self.attack
             if character.health < 0:
                 character.health = 0
-            print(f"{character.name}'s remaining health: {character.health}")
+            if character.health == 0:
+                print(f"{character.name} has been defeated!")
+            else:
+                print(f"{character.name}'s remaining health: {character.health}")
 
 goblin = Enemy("Goblin", 10, 5)
 
