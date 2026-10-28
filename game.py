@@ -67,7 +67,7 @@ class Enemy:
 
     def attack_character(self,character):
         if character.health == 0:
-            print("The character has already been defeated!")
+            print(f"{character.name} has already been defeated!")
         else:
             character.health -= self.attack
             if character.health < 0:
