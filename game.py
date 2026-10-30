@@ -18,13 +18,13 @@ class Character:
         print(f"Health: {self.health}")
 
     def take_damage(self,damage):
-        self.health = self.health - damage
-        if self.health < 0:
-            self.health = 0
-        if self.health == 0:
+        self._health -= damage
+        if self._health < 0:
+            self._health = 0
+        if self._health == 0:
             print(f"{self.name} has been defeated!")
         else:
-            print(f"Remaining health: {self.health}")
+            print(f"Remaining health: {self._health}")
 
     def heal(self,healing_amount):
         if self.health == 0:
