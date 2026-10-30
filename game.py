@@ -77,7 +77,11 @@ class Enemy:
             else:
                 print(f"{character.name}'s remaining health: {character.health}")
 
-goblin = Enemy("Goblin", 10, 5)
+# Test 1: Armin survives
+armin = Character("Armin","Warrior",1,100,100,10,50)
+goblin = Enemy("Goblin",30,5)
+goblin.attack_character(armin)
 
-goblin.take_damage(10)
-goblin.take_damage(5)
+# Test 2: Armin is defeated
+armin = Character("Armin","Warrior",1,5,100,10,50)
+goblin.attack_character(armin)
