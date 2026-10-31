@@ -27,13 +27,13 @@ class Character:
             print(f"Remaining health: {self._health}")
 
     def heal(self,healing_amount):
-        if self.health == 0:
+        if self._health == 0:
             print("A defeated character cannot heal!")
         else:
-            self.health = healing_amount + self.health
-            if self.health > self.max_health:
-                self.health = self.max_health
-            print(f"Updated health: {self.health}")
+            self._health = healing_amount + self._health
+            if self._health > self.max_health:
+                self._health = self.max_health
+            print(f"Updated health: {self._health}")
 
     def attack_enemy(self, enemy):
         if self.health == 0:
